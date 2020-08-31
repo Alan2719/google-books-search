@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.header-container {
+    background-color: #3cba54;
+    margin-bottom: 10px;
+}
+
+.header {
+    height: 100px;
+    padding: 0 30px;
+    color: black;
+    font-size: 20px;
+    background-color: #3cba54;
+}
+
+
+/*Logo div styles*/
+header .header .logo-box {
+    background-color: #3cba54;
+    float: left;
+    height: 100px;
+    color: #f4c20d;
+}
+
+/*Logo h2 styles*/
+.logo {
+    line-height: 100px;
+    float: left;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+
+/*MENU---------------------------------------------------*/
+
+/*menu container styles*/
+.menu {
+    float: right;
+    padding: 35px 0;
+    z-index: 3000;
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    color: #f4c20d;
+}
+
+/*menu links styles*/
+.text-menu {
+    text-decoration: none;
+    color: #db3236 !important;
+    padding: 0 10px;
+    transition: 0.5s;
+    font-family: 'Arvo', serif;
+    display: inline-block;
+}
+
+/*botton of the menu*/
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.5s;
+    font-size: 25px;
+    cursor: pointer;
+    display: none; /*Con none, los botones no serán visibles por el momento*/
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 100px;
+}
+
+/*hover of the menu links*/
+.menu li:hover,
+.show-menu-btn:hover {
+    color: rgb(255, 187, 0);
+}
+
+.hide-menu-btn {
+    color: white;
+}
+
+/*display menu when the screen is reduced*/
+#chk {
+    margin-left: -150px;
+    display: none;
+}
+
+/*threshold of screen when is reduced*/
+
+@media (max-width: 952px){
+
+    .logo-box {
+        margin-left: 20px;
+    }
+
+    .menu li {
+        font-size: 18px;
+    }
+    
+    .hide-menu-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+/*Toogle menu*/
+@media (max-width: 858px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: black;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .menu li {
+        display: block;
+        line-height: 30px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .menu li:hover {
+        background-color: rgb(241, 240, 240);
+    }
+
+    #chk:checked ~ ul {
+        left: 0.3em;
+    }
+
+    .hide-menu-btn:hover {
+        color: yellow;
+    }
+}
+

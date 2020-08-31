@@ -1,0 +1,17 @@
+.jumbotron {
+    background-color: #4885ed;
+    height: 300px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 55px;
+    text-align: center;
+    color: #db3236;
+}
+
+h3 {
+    text-align: center;
+    color: #db3236;
+}

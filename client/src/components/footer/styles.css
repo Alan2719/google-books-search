@@ -1,0 +1,17 @@
+/*text styles*/
+footer .card .card-footer p {
+    font-family: 'Arvo', serif;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+footer .card .card-footer  {
+    background-color: black;
+}
+
+footer {
+    /*position: relative;*/
+    bottom: 0px;
+    width: 100%;
+}
