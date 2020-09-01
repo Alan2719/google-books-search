@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from "../components/navbar";
 import Jumbotron from "../components/jumbotron";
 import Footer from "../components/footer";
-import Row from "../components/row";
-import Wrapper from "../components/wrapper";
-import Container from "../components/container";
+import API from "../utils/API";
+import SavedBooks from "../components/savedBooks";
 //import "../../styles/about.css";
 
 function Save () {
+
+    const [allBooks, setAllBooks] = useState([]);
+
+    useEffect(() => {
+        API.getBooks()
+        .then(result => {
+            console.log(result);
+            setAllBooks(result);
+        })   
+    });
 
     return(
         <>
             <Navbar />
             <Jumbotron />
+            <SavedBooks 
+                savedBooks = {allBooks}
+            />
             <Footer />
         </>
     )

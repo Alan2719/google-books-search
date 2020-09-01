@@ -41,7 +41,6 @@ function Search () {
         API.saveBook({    
             title: savedBook[0].volumeInfo.title,
             author: savedBook[0].volumeInfo.authors[0],
-            synopsis: savedBook[0].volumeInfo.description,
             image: savedBook[0].volumeInfo.imageLinks.smallThumbnail,
             link: savedBook[0].volumeInfo.infoLink
         })
